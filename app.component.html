@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <input #dbName type="text" id="dbName" placeholder="Name"/>
+    <input #dbVersion type="text" id="dbVersion" value="1" placeholder="Version"/>
+    <button (click)="createDb(dbName.value, dbVersion.value)">Open</button>
+  </div>
+  <br>
+  <div>
+    <input #dbDocument type="text" id="dbDocument" placeholder="Document Value"/>
+    <button (click)="addDocument(dbDocument.value, 'players')">Add Document/Players</button>
+    <button (click)="addDocument(dbDocument.value, 'notes')">Add Document/Notes</button>
+  </div>
+  <br>
+  <div>
+    <input #dbDocumentQuery type="text" placeholder="Document Value"/>
+    <button (click)="getDocument(dbDocumentQuery.value, 'players')">Get Document/Players</button>
+    <button (click)="getDocument(dbDocumentQuery.value, 'notes')">Get Document/Notes</button>
+  </div>
+</div>
